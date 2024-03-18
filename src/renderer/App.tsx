@@ -1,39 +1,33 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
-import icon from '../../assets/icon.svg';
+import icon from '../../assets/img/TempelCode_logo.png';
 import './App.css';
 
-function Hello() {
+function Scoreboard() {
   return (
     <div>
-      <div className="Hello">
-        <img width="200" alt="icon" src={icon} />
+      <div className="Scoreboard">
+        <img width="500" alt="icon" src={icon} />
       </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="folded hands">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
+      <h1>Scoreboard</h1>
+      <div id="scoreboard">
+        <table>
+          <thead>
+            <tr>
+              <th>Speler</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Speler 1</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Speler 2</td>
+              <td>85</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
@@ -43,7 +37,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Hello />} />
+        <Route path="/" element={<Scoreboard />} />
       </Routes>
     </Router>
   );
